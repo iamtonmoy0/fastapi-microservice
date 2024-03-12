@@ -52,6 +52,7 @@ async def create_order(request: Request):
         status="pending",
     )
     order.save()
+    order_completed(order)
     return order
 
 
